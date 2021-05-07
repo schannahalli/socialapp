@@ -11,24 +11,24 @@ const {
     validationResult
 } = require('express-validator');
 
-// //@route  GET api/auth
-// //@desc   Test route
-// //@access Public
-// router.get('/', auth, async (req, res) => {
-//     try {
-//         console.log(req.user.id);
-//         const user = await User.findById(req.user.id).select('-password');
+//@route  GET api/auth
+//@desc   Test route
+//@access Public
+router.get('/', auth, async (req, res) => {
+    try {
+        console.log(req.user.id);
+        const user = await User.findById(req.user.id).select('-password');
 
-//         console.log(user.name);
-//         // console.log(user);
-//         res.json(user);
-//     } catch (err) {
-//         console.error(err.message);
-//         res.status(500).json({
-//             msg: 'server error'
-//         });
-//     }
-// });
+        console.log(user.name);
+        // console.log(user);
+        res.json(user);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).json({
+            msg: 'server error'
+        });
+    }
+});
 
 //@route  POST api/auth
 //@desc   Authenticate user & get token
