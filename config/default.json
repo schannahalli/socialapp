@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb://test:test@127.0.0.1:27017/socialapp?retryWrites=true"
+    "mongoURI": "mongodb://test:test@127.0.0.1:27017/socialapp?retryWrites=true",
+    "jwtSecret": "mysecrettoken"
 }

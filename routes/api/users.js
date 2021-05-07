@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const {
+    check,
+    validationResult
+} = require('express-validator');
 
-//@route  GET api/users
-//@desc   Test route
-//@access Public
-// router.get('/', function (req, res) {
-//     res.send('About this wiki');
-// })
-router.get('/', (req, res) => res.send('User1 route'));
+const User = require('../../models/User');
+const gravatar = require('gravatar');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+
+
 module.exports = router;
